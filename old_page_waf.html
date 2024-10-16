@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>站点维护中！</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="shortcut icon" href="https://img-bohe.lolicon.team/i/img/svg/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://down-cdn.lolicon.team/api/css/404style_auto.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Noto Serif">
+  <style>
+    .left-half {
+  flex: 1;
+  height: 100vh;
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://img-bohe.lolicon.team/i/img/img-cdn/status_left-9e8c50b4.jpg");
+}
+
+
+.right-half {
+  background-position: center 0; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://img-bohe.lolicon.team/i/img/img-cdn/waf-bg/2_2.jpg");
+  flex: 1;
+  height: 100vh;
+}
+  </style>
+</head>
+
+<body>
+  <div id="loading">
+    <span>
+        <img data-v-loadimg1="" src="https://img-bohe.lolicon.team/i/img/svg/logo.webp"/>
+    </span>
+    <span>
+        <img data-v-loadimg2="" src="https://img-bohe.lolicon.team/i/img/img-cdn/harmony_black-0bb18ec7.webp" />
+    </span>
+    <span>
+      <img data-v-loadimg3="" src="https://img-bohe.lolicon.team/i/img/svg/akatsuki.webp"/>
+  </span>
+  </div>
+  <section class="container">
+    <div class="left_box">
+
+    
+      <div class="left-half">
+        <article>
+          <div class="left-font">
+            <h1>站点维护呐(。・∀・)ノ</h1>
+            <p class="text-black">
+                咱们正在维护该服务! (￣へ￣)
+            </p>
+            <p class="sub-header">
+                <a data-v-154241="" target="_blank" href="https://t.me/+HQV8yfY9Xtg0ZGQy">Telegram</a>
+                <a data-v-154241="" target="_blank" href="https://space.bilibili.com/387270547">哔哩哔哩</a>
+                <a data-v-154241="" target="_blank" href="https://ts.voice.lolicon.team/">Teamspeak</a>
+              </p>
+            <div data-v-91f7ba14="" class="sub-footer">
+              <div data-v-91f7ba14="" class="w-full"></div>
+              <ul data-v-91f7ba14="">
+                <li data-v-91f7ba14="">絢咲萌社区成员共同维护</li>
+                <li data-v-91f7ba14="">©Akatsuki SASO 2022-2024</li>
+                <li data-v-91f7ba14=""><span id="getIP"></span></li>
+                <li data-v-91f7ba14="">访问时间：<span id="now"></span></li>
+                <li data-v-91f7ba14="">你的ID( •̀ ω •́ )✧<span id="EventID"></span></li>
+                <li data-v-91f7ba14="">
+                  <span id="powered-by">安全检测能力由</span>
+                    <a class="footer-waflink" href="https://waf-ce.chaitin.cn">
+                      <span id="waf-title">长亭雷池 WAF</span>
+                    </a>
+                  <span id="powered-by-tail">驱动</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+      <div class="right-half"></div>
+  </section>
+  <script>
+    //检测浏览器是否为夜间模式
+    var isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (isDark) {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+      document.getElementsByClassName('right-half')[0].classList.add('dark-bg');
+      document.getElementsByTagName('img')[0].classList.add('dark-bg');
+      document.getElementsByTagName('img')[1].classList.add('dark-bg');
+      document.getElementsByTagName('img')[2].classList.add('dark-bg');
+    }
+  </script>
+  <script src="https://static.lolicon.team/jsd/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+      console.log("%c Heartfelt %c", "background-image: linear-gradient(195deg, #169af8 0%, #16e6f8 100%); color:#ffffff", "", "或许这里未来会成为中文互联网为数不多的净土吧");
+          $(window).on('load', function (callback)  {
+              setTimeout(function () {
+                  $('#loading').fadeOut(500);
+              }, 1500);
+          });
+    </script>
+    <script>
+        $.getJSON('https://ip-api.lolicon.team/?format=json', function(data){
+            console.log(data);
+            // 将内容输出到 id为getIP 的标签中
+            $('#getIP').html('您的IP地址为：'+data.ip);
+        });
+    </script>
+  <script>
+    //滚动条禁用
+    $(document).ready(function () {
+      $(document).bind("scroll", function () {
+        return false;
+      });
+    });
+  </script>
+  <script>
+    // 显示当前时间
+    function timestring() {
+      var d = new Date();
+      function p(d) {
+        return d < 10 ? "0" + d : d;
+      }
+      return (
+        d.getFullYear() +
+        "-" +
+        p(d.getMonth() + 1) +
+        "-" +
+        p(d.getDate()) +
+        " " +
+        p(d.getHours()) +
+        ":" +
+        p(d.getMinutes())
+      );
+    }
+    document.getElementById("now").innerText = timestring();
+  </script>
+</body>
+</html>

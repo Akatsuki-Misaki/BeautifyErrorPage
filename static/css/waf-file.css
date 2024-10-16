@@ -1,3 +1,102 @@
+/* loading start */
+#loading {
+	position: fixed;
+	top: 0px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10000;
+	background-color: #084db5;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+}
+#boxlogo{
+	max-width: 360px;
+	max-height: 143.5px;
+}
+img[data-v-loadimg1]{
+  width: 140px;
+  height: 140px;
+  overflow:hidden;
+}
+img[data-v-loadimg2]{
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow:hidden;
+}
+img[data-v-loadimg3]{
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  transform: translate(-50%);
+  width: 140px;
+}
+.fl{
+	float: left;
+}
+.ml2e{
+	margin-left: 2em;
+}
+.margin_top_3em{
+	margin-top: 3em;
+    margin-bottom: 2em;
+}
+.clf{
+	color: #fff;
+}
+.opcy0{
+	opacity: 0;
+}
+.opcy1{
+	opacity: 1;
+	animation: fadeIn 1s forwards;
+}
+.disable{
+	animation: fadeOut 1s forwards;
+}
+.logomove{
+	margin-left: 0;
+	animation: moveleft 1s forwards;
+}
+/* 渐出动画 */
+@keyframes fadeOut {
+  0% {
+	opacity: 1;
+  }
+  100% {
+	opacity: 0;
+  }
+}
+/* 渐入动画 */
+@keyframes fadeIn {
+  0% {
+	opacity: 0;
+  }
+  100% {
+	opacity: 1;
+  }
+}
+/* 移动动画 */
+@keyframes moveleft {
+  0% {
+	margin-left: 110px;
+  }
+  100% {
+	margin-left: 0;  }
+}
+#RTXT p {
+	font-family: "微软雅黑";
+	font-weight: 700;
+}
+/* loading end */
+
+
 body {
     font-size: 12px;
     background: #fff;
@@ -35,7 +134,7 @@ li {
 
     .hanasaki {
         padding-top: 180px;
-        padding-bottom: 112px
+        padding-bottom: 80px;
     }
 
     .container {
@@ -242,12 +341,11 @@ li {
     }
 }
 
-#footer_text {
+#footer_text p {
     font-size: 14px;
     color: #666666;
     letter-spacing: 1px;
     text-align: center;
-    padding-bottom: 35px;
     font-weight: bold;
 }
 
