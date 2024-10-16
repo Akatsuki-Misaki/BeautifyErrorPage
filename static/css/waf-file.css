@@ -69,7 +69,7 @@ li {
         color: #666666;
         letter-spacing: 1px;
         text-align: center;
-        padding-bottom: 35px;
+        padding-bottom: 10px;
         font-weight: bold;
     }
 
@@ -243,7 +243,6 @@ li {
 }
 
 #footer_text {
-    margin-top: 5vh;
     font-size: 14px;
     color: #666666;
     letter-spacing: 1px;
